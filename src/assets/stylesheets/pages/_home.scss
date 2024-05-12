@@ -1,15 +1,22 @@
 .page-home {
   .download-all {
-    margin-top: 40px;
-    
     @include outline-button();
-    
+
     width: 100%;
     max-width: 220px;
 
     svg {
-      margin-right: 16px;  
+      margin-right: 16px;
     }
+  }
 
+  .refresh {
+    @include outline-button();
+  }
+
+  &__footer {
+    display: flex;
+    grid-gap: 16px;
+    padding-top: 40px;
   }
 }

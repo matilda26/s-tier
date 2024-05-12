@@ -11,19 +11,20 @@ const Row = ({ title, bgColor }) => {
   };
 
   const uploadImage = async (event) => {
-    const file = event.target.files[0];
-    event.target.value = ""; // Reset the input after file selection
-
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.src = e.target.result;
-      img.onload = () => {
-        imageContainerRef.current.appendChild(img);
+    const files = event.target.files;
+    Array.from(files).forEach((file) => {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.src = e.target.result;
+        img.onload = () => {
+          imageContainerRef.current.appendChild(img);
+        };
       };
-    };
-    reader.readAsDataURL(file);
+      reader.readAsDataURL(file);
+    });
+    event.target.value = ""; // Reset the input after file selection
   };
 
   const downloadRow = async () => {
@@ -81,6 +82,7 @@ const Row = ({ title, bgColor }) => {
         type="file"
         accept="image/*"
         onChange={uploadImage}
+        multiple={true}
         style={{ display: "none" }}
       />
       <button className="row__download" onClick={() => downloadRow(title)}>
