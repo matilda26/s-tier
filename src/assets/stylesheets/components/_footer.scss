@@ -1,15 +1,13 @@
 footer {
-  
   width: 100%;
   height: 2em;
   line-height: 2em;
-  color: white;
+  color: $white;
   text-align: center;
-  background-color: darkgray;
+  background-color: $darkgrey;
 
   p {
     font-size: 1em;
     margin: 0;
   }
-
 }

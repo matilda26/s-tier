@@ -4,6 +4,7 @@
   "version": "0.1.2",
   "author": "Colby Fayock <hello@colbyfayock.com>",
   "dependencies": {
+    "aws-sdk": "^2.1520.0",
     "gatsby": "^4.7.1",
     "gatsby-plugin-react-helmet": "^5.7.0",
     "gatsby-plugin-resolve-src": "^2.1.0",
@@ -13,7 +14,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "sass": "^1.49.7"
+    "sass": "^1.49.7",
+    "html2canvas": "^1.4.1",
+    "konva": "^9.3.1",
+    "react-konva": "^18.2.10",
+    "react-lottie": "^1.2.4",
+    "use-image": "^1.1.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {},
   "keywords": [

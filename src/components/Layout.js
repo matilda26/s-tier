@@ -14,11 +14,12 @@ const Layout = ({ children, pageName }) => {
   if ( pageName ) {
     className = `${className} page-${pageName}`;
   }
+  // TODO: Favicon
 
   return (
     <>
       <Helmet bodyAttributes={{ class: className}}>
-        <title>Gatsby Site</title>
+        <title>s-tier generator</title>
       </Helmet>
       <div className="wrapper">
         <Header />

@@ -1,23 +1,15 @@
 .page-home {
+  .download-all {
+    margin-top: 40px;
+    
+    @include outline-button();
+    
+    width: 100%;
+    max-width: 220px;
 
-  h1 {
-    color: black;
-  }
-
-  .gatsby-astronaut {
-
-    overflow: hidden;
-    width: 10em;
-    height: 10em;
-    background-color: rebeccapurple;
-    border-radius: 100%;
-    border: solid 6px rebeccapurple;
-    margin: 0 auto 1em;
-
-    img {
-      width: 100%;
+    svg {
+      margin-right: 16px;  
     }
 
   }
-
 }

@@ -1,0 +1,62 @@
+.row {
+  $row: &;
+  min-height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  grid-gap: 16px;
+
+  &:first-of-type {
+    #{$row}__inner {
+      border-top: 2px solid $black;
+    }
+  }
+
+  &__inner {
+    background-color: $darkgrey;
+    border: 2px solid $black;
+    border-top: none;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    min-height: 80px;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+      width: auto;
+      border-right: 2px solid $black;
+      height: 80px;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+
+  &__download,
+  &__upload {
+    @include outline-button();
+  }
+
+  &__title {
+    height: 100%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    border-right: 2px solid $black;
+    font-family: "Futura", sans-serif;
+    font-weight: 600;
+    flex: none;
+    font-size: 24px;
+  }
+}
